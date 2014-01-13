@@ -1,4 +1,14 @@
 ComeWithMe::Application.routes.draw do
+
+  devise_for :travelers
+
+  root :to => 'welcome#index'
+  
+  resources :dashboard
+
+
+
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
