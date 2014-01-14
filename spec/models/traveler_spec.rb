@@ -6,7 +6,7 @@ describe Traveler do
 			@traveler = Traveler.new name: 'Richard Grundy'
 		end
 
-	describe '#to_s' do 
+	describe 'to_s' do 
 		it 'displays the persons name' do
 			@traveler.to_s.should == 'Richard Grundy'
 		end
