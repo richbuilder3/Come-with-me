@@ -7,6 +7,8 @@ class CreateTrips < ActiveRecord::Migration
     t.integer :length_of_stay
     t.boolean :accomplished
 
+    t.integer :traveler_id
+
       t.timestamps
     end
   end

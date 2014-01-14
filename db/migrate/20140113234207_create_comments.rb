@@ -3,7 +3,7 @@ class CreateComments < ActiveRecord::Migration
     create_table :comments do |t|
     	t.integer :traveler_id
     	t.integer :trip_id
-    	t.string :description_text
+    	t.text :description_text
 
       t.timestamps
     end

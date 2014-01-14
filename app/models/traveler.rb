@@ -8,7 +8,8 @@ class Traveler < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me, :name
   # attr_accessible :title, :body
 has_many :comments 
-# has_many :trips
-has_many :trips, :through => :comments
+has_many :trips
+
+# has_many :trips, :through => :comments
   
 end
