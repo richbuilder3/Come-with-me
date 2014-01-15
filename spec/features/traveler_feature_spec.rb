@@ -1,25 +1,28 @@
-require 'spec_helper'
+	require 'spec_helper'
 
-describe "viewing travelers" do
+describe "viewing travelers page" do
 	before do 
-		@richard = Traveler.create name: "Richard Grundy"
+		@richard = Traveler.create!(name: "Richard Grundy", email: "travel@gmail.com", password: "password")
 		visit '/travelers' 
 	end
 	it "should have that travelers name" do
-		page.should have_content(@richard)
+		page.should have_content(@richard.name)
 	end
 end
 
 describe 'creating a traveler' do
-	describe 'starting on a new person page' do
+	describe 'starting on a new traveler page' do
 		before do
-			visit '/traveler/new'
+			visit new_traveler_registration_path
 		end
-		 it 'can create on a new traveler page' do
-		 		name = 'Chris'
-		 	fill_in 'name', {with: 'Chris'}
-		 	click_button 'submit'
-		 	page.should have_content('Chris')
+		 it 'can create a new traveler' do
+		 	@email = 'travel@gmail.com'
+		 	@password = 'password'
+		 	fill_in 'traveler_email', {with: @email}
+		 	fill_in 'traveler_password',{with: @password}
+		 	fill_in 'traveler_password_confirmation',{with: @password}
+		 	click_button 'Sign up'
+		 	page.should have_content(@email)
 		 end
 		end
 	end

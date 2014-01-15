@@ -6,9 +6,11 @@ ComeWithMe::Application.routes.draw do
   
   resources :dashboard
 
-get '/traveler/new' => 'traveler#new'
+# get '/travelers/new' => 'travelers#new'
 
-get '/travelers' => 'travelers#index'
+# get '/travelers' => 'travelers#index'
+
+# post '/travelers' => 'travelers#create'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

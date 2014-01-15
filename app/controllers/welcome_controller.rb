@@ -1,9 +1,6 @@
 class WelcomeController < ApplicationController
 
 	def index
-		@travelers = traveler.all
+		@travelers = Traveler.all
 	end
-
-
-	
 end
