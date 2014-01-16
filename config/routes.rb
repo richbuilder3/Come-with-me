@@ -4,7 +4,13 @@ ComeWithMe::Application.routes.draw do
 
   root :to => 'welcome#index'
   
-  resources :dashboard
+
+  resources :trips
+
+  resources :comments
+  
+
+  
 
 # get '/travelers/new' => 'travelers#new'
 

@@ -1,8 +1,21 @@
 <h1>Home Page</h1>
 
-
+ 
 <ul>
 	<% @travelers.each do |traveler| %>
 		<li><%= traveler.email %></li>
 	<% end %>
 </ul>
+
+
+<table border="1">
+	<% @trips.each do |trip| %>
+		<tr>
+		<td><%= trip.destination %></td>
+		<td><%= trip.origin %></td>
+		<td><%= trip.length_of_stay %></td>
+		<td><%= trip.traveler_id %></td>
+		<td><%= trip.accomplished %></td>
+		</tr>	
+	<% end %>
+</table>

@@ -9,8 +9,17 @@
 <body>
 
 
-	<% link_to "sign-in", new_traveler_session_path %>
-	<% link_to "sign-up", new_traveler_registration_path %>
+<p class="notice"><%=notice %></p>
+<p class="alert"><%= alert %></p>
+
+<% if traveler_signed_in? %>
+<p>Welcome, <%=current_traveler.email %></p>
+<%= link_to "logout", destroy_traveler_session_path, method: :delete %>
+<% else %>
+<%= link_to "sign-in", new_traveler_session_path %>
+<%= link_to "sign-up", new_traveler_registration_path %>
+<% end %>
+
 	
 <%= yield %>
 

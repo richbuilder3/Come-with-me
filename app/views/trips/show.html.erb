@@ -1,0 +1,12 @@
+<h1> Trip </h1>
+
+<table border="1">
+
+	<% @trip do  %>
+	<tr><%= @trip.destination %></tr>
+	<tr><%= @trip.origin %></tr>
+	<tr><%= @trip.length_of_stay %></tr>
+	<tr><%= @trip.accomplished %></tr>
+
+	<% end %>
+</table>
