@@ -15,9 +15,13 @@ comment on any travel plans, as well as trips that have been taken.
 ###Gems used
 
 1.rspec-rails
+-Used for Testing
 2.capybara
+-Also used for testing
 3.devise
+-used to authenicate users on the website
 
 
 ###API
 Gravtastic
+-Used to bring in pictures that are associated with users
