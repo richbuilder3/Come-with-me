@@ -4,7 +4,9 @@ class TravelersController < ApplicationController
 def index
 	@travelers = Traveler.all
 end
+
 def new
+	redirect_to '/travelers/sign_up'
 end
 
 def create
@@ -15,6 +17,10 @@ def create
 		password: params[:password]
 	})
 	redirect_to '/travelers'
+end
+
+def show
+	@traveler=Trip.find(params[:id])
 end
 
 

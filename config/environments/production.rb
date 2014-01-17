@@ -1,4 +1,8 @@
 ComeWithMe::Application.configure do
+  
+
+  config.gem 'gravtastic', :version => '>= 2.1.0'
+
   # Settings specified here will take precedence over those in config/application.rb
 
   # Code is not reloaded between requests

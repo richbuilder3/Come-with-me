@@ -14,6 +14,7 @@
 
 <% if traveler_signed_in? %>
 <p>Welcome, <%=current_traveler.email %></p>
+<%= image_tag current_traveler.gravatar_url %>
 <%= link_to "logout", destroy_traveler_session_path, method: :delete %>
 <% else %>
 <%= link_to "sign-in", new_traveler_session_path %>

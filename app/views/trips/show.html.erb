@@ -1,12 +1,23 @@
-<h1> Trip </h1>
-
+<h1>
 <table border="1">
-
-	<% @trip do  %>
-	<tr><%= @trip.destination %></tr>
-	<tr><%= @trip.origin %></tr>
-	<tr><%= @trip.length_of_stay %></tr>
-	<tr><%= @trip.accomplished %></tr>
-
-	<% end %>
+	<tr><td><%= @trip.destination %></td></tr>
+	<tr><td><%= @trip.origin%></td></tr>
+	<tr><td><%= @trip.length_of_stay %></td></tr>
+	<tr><td><%= @trip.accomplished %></td></tr>
 </table>
+</h1>
+
+
+
+
+<form action="<%= trip_path(@trip) %>" method='post'>
+	<input type="hidden" name='_method' value'delete'>
+	<button id='delete'>
+		delete
+	</button>
+</form>
+
+<%= link_to  ("New Trip"), '/trips/new' %>
+<%= link_to  ("New Trip"), '/trips/new' %>
+<%= link_to  ("Home Page"), '/' %>
+

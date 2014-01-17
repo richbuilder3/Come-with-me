@@ -1,0 +1,7 @@
+<form action="<% <%= edit_trip %>" method='post'>
+	<input type="hidden" name='_method' value='put'>
+	<input type='text' name='name' value='<%= @trip.name %>'>
+	<button id='submit'>
+		Submit
+	</button>
+</form>

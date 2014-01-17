@@ -1,15 +1,20 @@
 ComeWithMe::Application.routes.draw do
 
+root :to => 'welcome#index'
+
   devise_for :travelers
 
-  root :to => 'welcome#index'
+  resources :trips do
+    resources :comments
+  end
+
+  # resources :trips
+
+  # resources :comments
   
-
-  resources :trips
-
-  resources :comments
-  
-
+  resources :travelers do
+    resources :trips 
+  end
   
 
 # get '/travelers/new' => 'travelers#new'

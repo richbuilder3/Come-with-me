@@ -1,9 +1,12 @@
-<h1>Come along Travelers<h1>
+<h1>Registered Travelers<h1>
 
-<ul>
+<table class="table table-striped">
 	<% @travelers.each do |traveler| %>
-	<li>
-		<%= traveler.name %>
-	</li>
+	<tr>
+	<td><%= traveler.email %></td>
+	<td><%= traveler.name %></td>
+	<td><%= image_tag traveler.gravatar_url %></td>
 	<% end %>
-</ul>
+</tr>
+</table>
+

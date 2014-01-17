@@ -1,0 +1,11 @@
+<h1>Comments</h1>
+
+	<table ="2">
+	<% @comments.each do |comment| %>
+	<tr><td><%= comment.traveler.name %></td></tr>
+	<tr><td><%= comment.trip_id %></td></tr>
+	<tr><td><%= comment.description_text %></td></tr>
+	<% end %>
+</table>
+<p><%= link_to "New Comment", new_comment_path(:trips_id => @trip) %></p>
+<p><%= link_to "&lsaquo;&lsaquo; Back to trip", @trip %><p>

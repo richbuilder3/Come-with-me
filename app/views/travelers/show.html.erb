@@ -1,0 +1,17 @@
+
+<table border="1">
+	<tr><td><%= @traveler.name %></td></tr>
+	<tr><td><%= @traveler.email%></td></tr>
+</table>
+
+
+
+
+<form action="<%= traveler_path(@traveler) %>" method='post'>
+	<input type="hidden" name='_method' value'delete'>
+	<button id='delete'>
+		delete
+	</button>
+</form>
+
+

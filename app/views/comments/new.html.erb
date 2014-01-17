@@ -1,0 +1,10 @@
+<h1>Comments</h1>
+
+<%= form_for @comment do |f| %>
+	<%= f.label :description_text %>
+	<%= f.text_field :description_text %>
+	<br/>
+	<%= f.hidden_field :traveler_id, value: current_traveler.id %>
+	<br />
+	<%= f.submit %>
+<% end %>

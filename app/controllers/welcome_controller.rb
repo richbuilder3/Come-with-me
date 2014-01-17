@@ -4,4 +4,6 @@ class WelcomeController < ApplicationController
 		@travelers = Traveler.all
 		@trips = Trip.all
 	end
+
+	
 end
