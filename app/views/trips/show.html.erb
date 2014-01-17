@@ -1,6 +1,10 @@
 <h1>
 <table border="1">
-	<tr><td><%= @traveler.name %></td></tr>
+	<tr><td>
+		<% if @trip.traveler %>
+			<%= @trip.traveler.name %>
+		<% end %>
+	</td></tr>
 	<tr><td><%= @trip.destination %></td></tr>
 	<tr><td><%= @trip.origin%></td></tr>
 	<tr><td><%= @trip.length_of_stay %></td></tr>
