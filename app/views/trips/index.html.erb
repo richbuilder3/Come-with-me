@@ -1,17 +1,28 @@
 <h1>Trips</h1>
 
+<button type="button" class="btn btn-default btn-lg">
+	<%= link_to  ("Home"), '/' %>
+</button>
+
+<button type="button" class="btn btn-default btn-lg">
+	<%= link_to  ("New Trip"), '/trips/new' %>
+</button>
 
 <table class="table table-striped">
 	<% @trips.each do |trip| %>
 	<tr>
-	<td><%= trip.destination %></td>
-	<td><%= trip.origin %></td>
-	<td><%= trip.length_of_stay %></td>
-	<td><%= trip.traveler.email %><td>
-	<td><%= trip.accomplished %></td>
+	<td><h5>Destination</h5><%= trip.destination %></td>
+	<td><h5>Origin</h5><%= trip.origin %></td>
+	<td><h5>Length of Stay(in days)</h5><%= trip.length_of_stay %></td>
+	<td><h5>Email</h5><%= trip.traveler.email %><td>
+	<td><h5>Accomplished yet?</h5><%= trip.accomplished %></td>
 	<td><%= image_tag current_traveler.gravatar_url %></td>
 	</tr>
 	<% end %>
 </table>
+	
+
+
+
 
 <p><%= link_to "New Comment", new_trip_comment_path(:trip) => @trip%></p>

@@ -37,4 +37,22 @@ ComeWithMe::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  config.action_mailer.raise_delivery_errors = true
+
+  config.action_mailer.delivery_method = :smtp
+
+
+
+
+config.action_mailer.smtp_settings = {
+    :authentication => :plain,
+    :address => "smtp.mailgun.org",
+    :port => 587,
+    :domain => "come-with-me.herokuapp.com",
+    :user_name => "postmaster@come-with-me.herokuapp.com",
+    :password => '8kh9r5q8kzi0'
+}
+
+
 end

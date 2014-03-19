@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ComeWithMe</title>
+  <title>Come With Me</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+<link rel="stylesheet" href="stylesheets/styles.css">
+<link href='http://fonts.googleapis.com/css?family=Sarina' rel='stylesheet' type='text/css'>
+
 </head>
 <body>
+
+<div class="page-header">
+  <h1>Come With Me <small>Subtext for header</small></h1>
+</div>
 
 
 <p class="notice"><%=notice %></p>
 <p class="alert"><%= alert %></p>
 
+
 <% if traveler_signed_in? %>
-<p>Welcome, <%=current_traveler.email %></p>
+<p>Welcome, <%=current_traveler.name %></p>
 <%= image_tag current_traveler.gravatar_url %>
 <%= link_to "logout", destroy_traveler_session_path, method: :delete %>
 <% else %>
@@ -21,7 +29,8 @@
 <%= link_to "sign-up", new_traveler_registration_path %>
 <% end %>
 
-	
+
+
 <%= yield %>
 
 </body>

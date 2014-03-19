@@ -1,0 +1,11 @@
+body {
+background: url('beach_wallpaper1.jpg');
+/*background-color: #00FFFF;*/
+padding-top: 70px;
+background-position: center;
+}
+
+h1 {
+color: white;
+font-family: 'Sarina', cursive;
+}

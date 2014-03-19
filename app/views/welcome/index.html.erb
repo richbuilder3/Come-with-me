@@ -1,7 +1,5 @@
 <h1>Home Page</h1>
 
- 
-
 <button type="button" class="btn btn-default btn-lg">
 	<%= link_to  ("New Trip"), '/trips/new' %>
 </button>
@@ -20,18 +18,19 @@
 </table>
 </div>
 
-<div class="col-xs-6 col-md-4">
-<table class="table table-striped">
-	<% @trips.each do |trip| %>
-		<tr>
-		<td><%= trip.destination %></td>
-		<td><%= trip.origin %></td>
-		<td><%= trip.length_of_stay %></td>
-		<!-- <td><%= trip.traveler_id %></td> -->
-		<td><%= trip.accomplished %></td>
-		<td><%= trip.traveler.name %><td>
-		</tr>	
-	<% end %>
-</table>
-</div
+<!-- <div class"container"> -->
+	<div class="col-xs-6 col-md-4">
+		<table class="table table-striped">
+			<% @trips.each do |trip| %>
+				<tr>
+				<td><h3>Destination</3><td><%= trip.destination %></td>
+				<td><h3>Origin</h3><%= trip.origin %></td>
+				<td><h3>Length of stay</h3><%= trip.length_of_stay %></td>
+				<td><h3>Accomplished yet?</h3><%= trip.accomplished %></td>
+				<td><%= trip.traveler.name %><td>
+				</tr>	 
+			<% end %>
+		</table>
+	</div>
+<!-- </div> -->
 

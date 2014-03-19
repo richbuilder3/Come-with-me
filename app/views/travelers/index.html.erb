@@ -1,10 +1,12 @@
 <h1>Registered Travelers<h1>
 
-
 <button type="button" class="btn btn-default btn-lg">
 	<%= link_to  ("Home"), '/' %>
 </button>
 
+<button type="button" class="btn btn-default btn-lg">
+	<%= link_to  ("New Trip"), '/trips/new' %>
+</button>
 
 <table class="table table-striped">
 	<% @travelers.each do |traveler| %>
@@ -12,7 +14,6 @@
 	<td><%= traveler.email %></td>
 	<td><%= traveler.name %></td>
 	<td><%= image_tag traveler.gravatar_url %></td>
+	</tr>
 	<% end %>
-</tr>
 </table>
-
