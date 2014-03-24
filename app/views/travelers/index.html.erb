@@ -1,19 +1,21 @@
-<h1>Registered Travelers<h1>
+	<button type="button" class="btn btn-default btn-lg">
+		<%= link_to  ("Home"), '/' %>
+	</button>
 
-<button type="button" class="btn btn-default btn-lg">
-	<%= link_to  ("Home"), '/' %>
-</button>
+	<button type="button" class="btn btn-default btn-lg">
+		<%= link_to  ("New Trip"), '/trips/new' %>
+	</button>
 
-<button type="button" class="btn btn-default btn-lg">
-	<%= link_to  ("New Trip"), '/trips/new' %>
-</button>
-
-<table class="table table-striped">
-	<% @travelers.each do |traveler| %>
-	<tr>
-	<td><%= traveler.email %></td>
-	<td><%= traveler.name %></td>
-	<td><%= image_tag traveler.gravatar_url %></td>
-	</tr>
-	<% end %>
-</table>
+<h1>Registered Travelers</h1>
+	
+<div class="container">
+	<table class="table">
+		<% @travelers.each do |traveler| %>
+		<tr>
+		<!-- <td><%= traveler.email %></td>  -->
+		<td><h2><%= traveler.name %></h2></td>
+		<td><%= image_tag traveler.gravatar_url,:class => "img-rounded" %></td>
+		</tr>
+		<% end %>
+	</table>
+</div>
