@@ -1,14 +1,22 @@
-<h1>Home Page</h1>
+<div id="hpbuttons">
+	<button type="button" class="btn btn-default btn-lg">
+		<%= link_to  ("New Trip"), '/trips/new' %>
+	</button>
 
-<button type="button" class="btn btn-default btn-lg">
-	<%= link_to  ("New Trip"), '/trips/new' %>
-</button>
+	 <button type="button" class="btn btn-default btn-lg">
+		<%= link_to  ("Travelers"), '/travelers' %>
+	</button>
+</div>
 
- <button type="button" class="btn btn-default btn-lg">
-<%= link_to  ("Travelers"), '/travelers' %>
-</button>
+<div id="homepage1">
+	<h1>Come with Me</h1>
+	<h2>Welcome! Let's talk about our past and future travels</h2>
+	<h3>(Have you Signed in?)</h3>
+</div>
 
-<div class="col-md-4">
+
+
+<!-- <div class="col-md-4">
 <table class="table table-striped">
 	<% @travelers.each do |traveler| %>
 	<tr><td><%= traveler.email %></td>
@@ -16,10 +24,11 @@
 	<td><%= image_tag traveler.gravatar_url %></td>
 	<% end %>
 </table>
-</div>
+</div> -->
 
 <!-- <div class"container"> -->
-	<div class="col-xs-6 col-md-4">
+
+	<!-- <div class="col-xs-6 col-md-4">
 		<table class="table table-striped">
 			<% @trips.each do |trip| %>
 				<tr>
@@ -31,6 +40,7 @@
 				</tr>	 
 			<% end %>
 		</table>
-	</div>
+	</div> -->
+
 <!-- </div> -->
 

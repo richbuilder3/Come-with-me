@@ -1,21 +1,24 @@
 <h1>Enter you Trip!</h1>
 
-<div class="col-xs-6 col-md-4">
-	<%= form_for @trip do |f| %>
-	<%= f.hidden_field :traveler_id, value: current_traveler.id %>
-	<%= f.label :destination %>
-	<%= f.text_field :destination %>
-	<br/>
-	<%= f.label :origin %>
-	<%= f.text_field :origin %>
-	<br/>
-	<%= f.label :length_of_stay %>
-	<%= f.text_field :length_of_stay %>
-	<br/>
-	<h5>Have you made this trip already?</h5>
-	<%= f.select :accomplished, [['Yes', 'Yes'], ["No", "No"]] %>
-	<br />
-	<%= f.submit %>
-	<% end %>
+			
+<div id="center">
+		<div class="col-xs-6 col-md-4">
+			<%= form_for @trip do |f| %>
+			<%= f.hidden_field :traveler_id, value: current_traveler.id %>
+			<%= f.label :destination %>
+			<%= f.text_field :destination %>
+			<br/>
+			<%= f.label :origin %>
+			<%= f.text_field :origin %>
+			<br/>
+			<%= f.label :length_of_stay %>
+			<%= f.text_field :length_of_stay %>
+			<br/>
+			<h5>Have you made this trip already?</h5>
+			<%= f.select :accomplished, [['Yes', 'Yes'], ["No", "No"]] %>
+			<br />
+			<%= f.submit %>
+			<% end %>
+		</div>
 </div>
 

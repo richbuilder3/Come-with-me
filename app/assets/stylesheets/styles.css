@@ -2,10 +2,67 @@ body {
 background: url('beach_wallpaper1.jpg');
 /*background-color: #00FFFF;*/
 padding-top: 70px;
-background-position: center;
+background-position: cover;
+
 }
 
 h1 {
+/*color: #003366;*/
 color: white;
 font-family: 'Sarina', cursive;
+font-size: 80px;
+text-align: center;
+text-shadow: 6px 6px #310062;
+}
+
+h2 {
+	color: white;
+	text-shadow: 5px 5px #310062;
+}
+
+h3 {
+	color: white;
+	text-shadow: 3px 3px #310062;
+}
+
+
+#center {
+	/*text-align: center;*/
+	/*float: center;*/
+	position: absolute;
+	/*top: 50%;*/
+	left: 50%;
+	/*right: 50%;*/
+}
+
+#homepage {
+/*color: #003366;*/
+color: white;
+font-family: 'Sarina', cursive;
+font-size: 120px;
+text-align: center;
+}
+
+#homepage1 {
+text-align: center;
+color: white;
+/*float: right;*/
+position: center;
+}
+
+#hpbuttons {
+	/*float: left;*/
+}
+
+#authenticate {
+	/*background-color: white;*/
+	/*float: left;*/
+
+}
+
+#show {
+/*text-align: center;
+position: center;*/
+margin: 0 auto;
+width: 90%;
 }
