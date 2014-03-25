@@ -3,7 +3,7 @@
 	</button>
 
 	<button type="button" class="btn btn-default btn-lg">
-		<%= link_to  ("New Trip"), '/trips/new' %>
+		<%= link_to  ("Add a Trip"), '/trips/new' %>
 	</button>
 
 <h1>Registered Travelers</h1>
@@ -12,9 +12,8 @@
 	<table class="table">
 		<% @travelers.each do |traveler| %>
 		<tr>
-		<!-- <td><%= traveler.email %></td>  -->
 		<td><h2><%= traveler.name %></h2></td>
-		<td><%= image_tag traveler.gravatar_url,:class => "img-rounded" %></td>
+		<td><%= image_tag traveler.gravatar_url,:class => "img-rounded"%></td>
 		</tr>
 		<% end %>
 	</table>
