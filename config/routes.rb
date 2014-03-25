@@ -4,13 +4,15 @@ root :to => 'welcome#index'
 
   devise_for :travelers
 
+  # resources :travelers do
   resources :trips do
     resources :comments
   end
-  
-  resources :travelers do
-    resources :trips 
-  end
+  # end
+
+  # resources :travelers 
+  #   # resources :trips 
+  # end
   
 
 # get '/travelers/new' => 'travelers#new'

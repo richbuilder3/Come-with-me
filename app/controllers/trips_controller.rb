@@ -22,5 +22,11 @@ class TripsController < ApplicationController
 			render 'new'
 		end
 	end
+
+	def destroy
+		Trip.delete(params[:id])
+		redirect_to '/trips'
+	end
+
 end
 

@@ -9,3 +9,7 @@
 </table>
 <p><%= link_to "New Comment", new_comment_path(:trips_id => @trip) %></p>
 <p><%= link_to "&lsaquo;&lsaquo; Back to trip", @trip %><p>
+
+	<% @trip.comments.each do |comment| %>
+			<p><%= comment.description_text %></p>
+		<% end %>

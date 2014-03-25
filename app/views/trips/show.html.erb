@@ -1,25 +1,42 @@
 <h2>
 
-<div class="show">
-	<table border="1">
-		<tr><td>
-		<% if @trip.traveler %>
-			<%= @trip.traveler.name %>
-		<% end %>
-		</td></tr>
-		<tr><td><%= @trip.destination %></td></tr>
-		<tr><td><%= @trip.origin%></td></tr>
-		<tr><td><%= @trip.length_of_stay %></td></tr>
-		<tr><td><%= @trip.accomplished %></td></tr>
-	</table>
-	
-
-	<form action="<%= trip_path(@trip) %>" method='post'>
-		<input type="hidden" name='_method' value'delete'>
-		<button id='delete'>delete</button>
-	</form>
-</div>
-
 <%= link_to  ("New Trip"), '/trips/new' %>
 <%= link_to  ("Home Page"), '/' %>
-</h2>
+
+<div class="container">
+		<table border="1">
+			<tr><td>
+			<% if @trip.traveler %>
+				<%= @trip.traveler.name %>
+			<% end %>
+			</td></tr>
+			<tr><td><%= @trip.destination %></td></tr>
+			<tr><td><%= @trip.origin%></td></tr>
+			<tr><td><%= @trip.length_of_stay %></td></tr>
+			<tr><td><%= @trip.accomplished %></td></tr>
+		</table>
+		
+		
+		<%= link_to "Delete", @trip, :method => :delete %>
+
+		
+</div>
+
+</h2>	
+	
+<h2>Comments</h2>
+
+<%= form_for [@trip, @trip.comments.build] do |f| %>
+		<p><%= f.text_area :description_text, :size => '40x10' %></p>
+		<% f.hidden_field :traveler_id, value: current_traveler.id %>
+		<% f.hidden_field :trip_id %>
+		<p><%= f.submit "Post Comment"  %></p>
+			<% end %>
+
+		<% @trip.comments.each do |comment| %>
+			<p><%= comment.description_text %></p>
+		<% end %>
+
+
+
+	

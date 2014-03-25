@@ -118,10 +118,9 @@ module Gravtastic
 end
 
 class Traveler < ActiveRecord::Base  
-
   include Gravtastic
 
-  # trying to get gravtastic to work
+  # trying to get gravtastic to work, gem won't word. so include in model file
     is_gravtastic!
 
 
@@ -133,11 +132,11 @@ class Traveler < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :name, :age
-  # attr_accessible :title, :body
+  
 has_many :comments 
 has_many :trips
 
-# has_many :trips, :through => :comments
+# has_many :comments, :through => :trips
   
 
 
