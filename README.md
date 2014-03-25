@@ -26,4 +26,5 @@ comment on any travel plans, as well as trips that have been taken.
 Gravtastic
 - Used to be bring in Globally recgonized avatars that are associated with websites such as Stack Overflow, Github, and Word Press.
 
-Libraries
+###Libraries
+Styling assisted via Twitter BootStrap.
