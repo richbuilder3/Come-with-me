@@ -14,14 +14,17 @@ comment on any travel plans, as well as trips that have been taken.
 
 ###Gems used
 
-1.rspec-rails
+1.Rspec-rails
 -Used for Testing
-2.capybara
+2.Capybara
 -Also used for testing
-3.devise
+3.Devise
 -used to authenicate users on the website
 
 
 ###API
 Gravtastic
--Used to bring in pictures that are associated with users
+- Used to be bring in Globally recgonized avatars that are associated with websites such as Stack Overflow, Github, and Word Press.
+
+###Libraries
+Styling assisted via Twitter BootStrap.
