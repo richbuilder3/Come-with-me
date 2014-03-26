@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-
+before_filter :authenticate_traveler!
 
 	# def index
 	# 	@trip = trip.find(params[:trip_id])
