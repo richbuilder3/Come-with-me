@@ -9,14 +9,16 @@
 </button>
 <div class="container">
 	<table class="table table-striped">
+
 		<% @trips.each do |trip| %>
 		<tr>
-		<td><h5>Destination</h5><%= trip.destination %></td>
+		<td><h5>Destination</h5><%= link_to trip.destination, trip %></td>
 		<td><h5>Origin</h5><%= trip.origin %></td>
 		<td><h5>Length of Stay(in days)</h5><%= trip.length_of_stay %></td>
 		<!-- <td><h5>Email</h5><%= trip.traveler.email %><td> -->
 		<td><h5>Accomplished yet?</h5><%= trip.accomplished %></td>
 		<td><%= image_tag current_traveler.gravatar_url %></td>
+
 		</tr>
 		<% end %>
 	</table>

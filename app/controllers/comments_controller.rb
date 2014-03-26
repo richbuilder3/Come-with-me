@@ -12,6 +12,12 @@ class CommentsController < ApplicationController
 	# end
 
 	def create
+		# @trip = Trip.find(params[:trip_id])
+		# @traveler = Traveler.find(params[:traveler_id])
+		# @comment = @trip.create_comment!(@trip, @comment_params)
+		# @comment.save
+
+		# redirect_to @trip
 			# @trip = Trip.find(params[:trip_id])
 			# @comment = @trip.comments.build({
 			# description_text: params[:description_text],
