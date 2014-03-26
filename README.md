@@ -10,7 +10,7 @@ comment on any travel plans, as well as trips that have been taken.
 
 
 
--This application is hosted on heroku.
+-Hosted on heroku.
 
 ###Gems used
 
