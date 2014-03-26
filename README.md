@@ -1,6 +1,6 @@
 #Come with Me
 
-##A place online to connect travelers through their future and past travels.
+##A place online for Travelers to connect through their past and future travel plans.
 
 This program will allow users to add trips that they've either taken or plan to take. 
 Each Traveler must first register for the application with a name, email, and password. Once logged in the gravtastic gem will
@@ -10,7 +10,7 @@ comment on any travel plans, as well as trips that have been taken.
 
 
 
--This application is hosted on heroku.
+-Hosted on heroku.
 
 ###Gems used
 
