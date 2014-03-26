@@ -10,7 +10,7 @@ root :to => 'welcome#index'
   end
   # end
 
-  # resources :travelers 
+  resources :travelers 
   #   # resources :trips 
   # end
   

@@ -1,5 +1,5 @@
 class TripsController < ApplicationController
-
+before_filter :authenticate_traveler!
 
 	def index
 		@trips = Trip.all
