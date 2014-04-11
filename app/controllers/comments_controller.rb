@@ -26,14 +26,19 @@ before_filter :authenticate_traveler!
 			# @comment.save!
 			# redirect_to @trip
 
+
+
 		@trip = Trip.find(params[:trip_id])
 		Comment.create!({
-			description_text: params[:description_text],
+			description_text: params[:comment][:description_text],
+			
 			trip_id: params[:trip_id],
 			traveler_id: current_traveler.id})
+		
 		redirect_to @trip
 	
 	end
+
 	# def show
 	# 	@trip = trip.find(params[:trip_id])
 	# 	@comment=Comment.find(params[:id])
